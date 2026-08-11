@@ -1,0 +1,10 @@
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\bin\Debug\LPR Solver.exe.config
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\bin\Debug\LPR Solver.exe
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\bin\Debug\LPR Solver.pdb
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR Solver.csproj.AssemblyReference.cache
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR_Solver.Main.resources
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR_Solver.Properties.Resources.resources
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR Solver.csproj.GenerateResource.cache
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR Solver.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR Solver.exe
+C:\Users\marti\OneDrive - belgiumcampus.ac.za\Year 3\LPR381\Project\LPR381 LP Solver\LPR Solver\LPR Solver\obj\Debug\LPR Solver.pdb
