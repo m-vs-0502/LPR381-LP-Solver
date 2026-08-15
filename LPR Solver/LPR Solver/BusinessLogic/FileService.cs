@@ -14,13 +14,13 @@ namespace LPR_Solver.BusinessLogic
 
         public string GetFileContent(string filePath)
         {
-            // Business Rule: Ensure file exists before reading
+            // Ensure file exists before reading
             if (string.IsNullOrWhiteSpace(filePath) || !File.Exists(filePath))
             {
                 throw new FileNotFoundException("The specified file could not be found.");
             }
 
-            return _fileRepository.ReadTextFile(filePath);
+            return _fileRepository.ReadTextFile(filePath);// Calls function to read text file and returns string.
         }
     }
 }

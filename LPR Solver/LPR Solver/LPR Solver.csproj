@@ -49,7 +49,9 @@
     <Compile Include="BusinessLogic\BranchAndBoundSimplex.cs" />
     <Compile Include="BusinessLogic\CuttingPlane.cs" />
     <Compile Include="BusinessLogic\FileService.cs" />
+    <Compile Include="BusinessLogic\InputValidation.cs" />
     <Compile Include="BusinessLogic\Knapsack.cs" />
+    <Compile Include="BusinessLogic\OutputBuilder.cs" />
     <Compile Include="BusinessLogic\RevisedSimplex.cs" />
     <Compile Include="BusinessLogic\Simplex.cs" />
     <Compile Include="Data\FileRepo.cs" />

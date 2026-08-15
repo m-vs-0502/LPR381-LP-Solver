@@ -28,13 +28,13 @@ namespace LPR_Solver
             this.Close();
 
         }
-
+        string textFilePath = null;
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             // Create a new instance so Windows dialog state isn't cached/reused
             using (OpenFileDialog openFD = new OpenFileDialog())
             {
-                // 1. Strict filter string (ensure NO spaces around the '|')
+                // 1. Strict filter string 
                 openFD.Filter = "Text Files (*.txt)|*.txt";
 
                 // 2. Explicitly select the first filter option
@@ -44,7 +44,7 @@ namespace LPR_Solver
                 if (openFD.ShowDialog() == DialogResult.OK)
                 {
                     openFD.Filter = "Text Files (*.txt)|*.txt"; //Shows only .txt files
-                    string textFilePath = openFD.FileName; //Saves the path of selected file in variable
+                     textFilePath = openFD.FileName; //Saves the path of selected file in variable
 
                     try
                     {
@@ -92,13 +92,20 @@ namespace LPR_Solver
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            switch (cmbAlgorithm.SelectedIndex)
+            if (InputValidation.Validate(rTBDisplay.Text))
             {
-                case 0:
-                    string output = Simplex.SimplexSolver(rTBDisplay.Text);
-                    break;
-                default:
-                    break;
+                string output = null;
+                switch (cmbAlgorithm.SelectedIndex)
+                {
+                    case 0:
+                        output = Simplex.SimplexSolver(rTBDisplay.Text,textFilePath);
+                        break;
+                    default:
+                        break;
+
+                }
+
+                rTBDisplay.Text = output;
 
             }
         }

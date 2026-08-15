@@ -11,7 +11,7 @@ namespace LPR_Solver.Data
     {
         public string ReadTextFile(string filePath)
         {
-            // Disk I/O operation
+            // read whole text file into string
             return File.ReadAllText(filePath);
         }
     }
