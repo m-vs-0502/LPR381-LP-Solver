@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|solutionrelative:lpr solver\\businesslogic\\simplex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|c:\\users\\marti\\onedrive - belgiumcampus.ac.za\\year 3\\lpr381\\project\\lpr381 lp solver\\lpr solver\\lpr solver\\businesslogic\\outputbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|solutionrelative:lpr solver\\businesslogic\\outputbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\lpr solver\\presentation\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|solutionrelative:lpr solver\\presentation\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|c:\\users\\marti\\onedrive - belgiumcampus.ac.za\\year 3\\lpr381\\project\\lpr381 lp solver\\lpr solver\\lpr solver\\businesslogic\\convertstandardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|solutionrelative:lpr solver\\businesslogic\\convertstandardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCC56F06-AE3D-4A82-B66A-7D9357BB512D}|LPR Solver\\LPR Solver.csproj|C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\lpr solver\\presentation\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -43,13 +43,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\Presentation\\Main.cs",
               "RelativeDocumentMoniker": "LPR Solver\\Presentation\\Main.cs",
               "ToolTip": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\Presentation\\Main.cs",
               "RelativeToolTip": "LPR Solver\\Presentation\\Main.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAiwGQAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wCsAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-11T10:36:03.327Z",
               "IsPinned": true,
@@ -57,15 +57,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OutputBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\BusinessLogic\\OutputBuilder.cs",
-              "RelativeDocumentMoniker": "LPR Solver\\BusinessLogic\\OutputBuilder.cs",
-              "ToolTip": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\BusinessLogic\\OutputBuilder.cs",
-              "RelativeToolTip": "LPR Solver\\BusinessLogic\\OutputBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ConvertStandardForm.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\BusinessLogic\\ConvertStandardForm.cs",
+              "RelativeDocumentMoniker": "LPR Solver\\BusinessLogic\\ConvertStandardForm.cs",
+              "ToolTip": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\BusinessLogic\\ConvertStandardForm.cs",
+              "RelativeToolTip": "LPR Solver\\BusinessLogic\\ConvertStandardForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T11:33:08.909Z",
+              "WhenOpened": "2026-08-16T09:35:05.949Z",
               "EditorCaption": ""
             },
             {
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "LPR Solver\\BusinessLogic\\Simplex.cs",
               "ToolTip": "C:\\Users\\marti\\OneDrive - belgiumcampus.ac.za\\Year 3\\LPR381\\Project\\LPR381 LP Solver\\LPR Solver\\LPR Solver\\BusinessLogic\\Simplex.cs",
               "RelativeToolTip": "LPR Solver\\BusinessLogic\\Simplex.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAYwGsAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwFMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T10:31:36.692Z",
               "EditorCaption": ""

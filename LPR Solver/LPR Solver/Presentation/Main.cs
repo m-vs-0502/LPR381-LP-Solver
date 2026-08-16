@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LPR_Solver.BusinessLogic;
+using System.IO;
 
 
 namespace LPR_Solver
@@ -39,6 +40,8 @@ namespace LPR_Solver
 
                 // 2. Explicitly select the first filter option
                 openFD.FilterIndex = 1;
+
+                openFD.InitialDirectory = Path.Combine(AppContext.BaseDirectory,@"..\..\..\");
 
 
                 if (openFD.ShowDialog() == DialogResult.OK)

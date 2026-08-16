@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace LPR_Solver.BusinessLogic
 {
-    public static class OutputBuilder
+    internal static class OutputBuilder
     {
-        public static string CreateTextFileOutput(string inputPath)
+        internal static string CreateTextFileOutput(string inputPath)
         {
            
             string directory = Path.GetDirectoryName(inputPath);
