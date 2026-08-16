@@ -81,9 +81,9 @@ namespace LPR_Solver.BusinessLogic
 
                         foreach (double colValue in row)
                         {
-                            matrix += colValue + "\t|";
+                            matrix += colValue.ToString("0.##").PadLeft(7) + "\t";
                         }
-                        matrix += "\n" + new string('_', 50) + "\n";
+                        matrix += "\n"; //+ new string('_', 50) + "\n";
 
                     }
                     ;
