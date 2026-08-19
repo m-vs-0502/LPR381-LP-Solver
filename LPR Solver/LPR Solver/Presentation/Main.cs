@@ -100,6 +100,9 @@ namespace LPR_Solver
                     case 0:
                         output = Simplex.SimplexSolver(rTBDisplay.Text,textFilePath);
                         break;
+                    case 4:
+                        modelOutput = CuttingPlane.CuttingPlaneSolver(modelInput, textFilePath);
+                        break;
                     default:
                         break;
 
