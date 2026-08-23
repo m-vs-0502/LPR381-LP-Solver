@@ -127,6 +127,9 @@ namespace LPR_Solver
                     case 3:
                         modelOutput = Knapsack.KnapsackSolver(modelInput, textFilePath);
                         break;
+                    case 4:
+                        modelOutput = CuttingPlane.CuttingPlaneSolver(modelInput, textFilePath);
+                        break;
                     default:
                         modelOutput.Add("No model selected.");
                         break;
