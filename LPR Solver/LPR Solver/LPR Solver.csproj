@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\BranchAndBoundSimplex.cs" />
+    <Compile Include="BusinessLogic\ConvertStandardForm.cs" />
     <Compile Include="BusinessLogic\CuttingPlane.cs" />
     <Compile Include="BusinessLogic\FileService.cs" />
     <Compile Include="BusinessLogic\InputValidation.cs" />

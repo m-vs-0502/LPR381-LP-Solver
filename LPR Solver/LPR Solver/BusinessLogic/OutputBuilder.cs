@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace LPR_Solver.BusinessLogic
 {
-    public static class OutputBuilder
+    internal static class OutputBuilder
     {
-        public static string CreateTextFileOutput(string inputPath)
+        internal static string CreateTextFileOutput(string inputPath)
         {
            
-            string directory = Path.GetDirectoryName(inputPath);
+            string directory = Path.GetDirectoryName(inputPath);//get input directory
 
-            string outputPath = Path.Combine(directory ?? string.Empty, "lp_output.txt");
+            string outputPath = Path.Combine(directory ?? string.Empty, "lp_output.txt");//combine with new textfile as output in same directory
 
-            File.Create(outputPath).Close();
+            File.Create(outputPath).Close();//creates the output file (overrides existing fiile)
             return outputPath;
            
         }
