@@ -21,7 +21,43 @@ namespace LPR_Solver.BusinessLogic
                 colHeads.RemoveAt(0);
             }
 
+            // bin = 0 or 1, not just "any integer" . The ConvertMatrix doesn't add that upper
+            // bound on its own, so we bolt on a x_j <= 1 row for every bin var before we startsolving
+            AddBinaryUpperBounds(matrixList, colHeads, rowHeads, varSigns);
+
             return SolveCuttingPlane(matrixList, colHeads, rowHeads, varSigns, objFunc, outputPath);
+        }
+
+        // adds one x_j <= 1 constraint row per bin-restricted variable, straight into the
+        // starting tableau, so bin vars are actually capped at 1 and not just forced integer
+        private static void AddBinaryUpperBounds(
+            List<List<double>> matrixList,
+            List<string> colHeads,
+            List<string> rowHeads,
+            List<string> varSigns)
+        {
+            for (int varIdx = 0; varIdx < varSigns.Count && varIdx < colHeads.Count - 1; varIdx++)
+            {
+                if (!varSigns[varIdx].Trim().Equals("bin", StringComparison.OrdinalIgnoreCase)) continue; // only bin vars need this
+
+                int newRhsIndex = colHeads.Count - 1; // recompute every loop, RHS keeps shifting right as we insert
+                string newSlackName = "s" + rowHeads.Count; // sequential, matches the naming used everywhere else
+                colHeads.Insert(newRhsIndex, newSlackName);
+
+                for (int r = 0; r < matrixList.Count; r++)
+                {
+                    matrixList[r].Insert(newRhsIndex, 0.0); // every existing row gets a 0 in the new slack column
+                }
+
+                int newRhsCol = matrixList[0].Count - 1;
+                List<double> newRow = new List<double>(new double[colHeads.Count]);
+                newRow[varIdx] = 1.0;       // x_j
+                newRow[newRhsIndex] = 1.0;  // + slack
+                newRow[newRhsCol] = 1.0;    // = 1  ->  x_j <= 1
+
+                matrixList.Add(newRow);
+                rowHeads.Add(newSlackName);
+            }
         }
 
         // solve LP -> check if it's integer yet -> if not, slice off the fraction and go again
@@ -91,9 +127,9 @@ namespace LPR_Solver.BusinessLogic
                     double frac = val - Math.Floor(val);
                     double fractionality = Math.Min(frac, 1 - frac); // basically "how not-whole is this"
 
-                    if (fractionality > 0.0001 && frac > largestFraction)
+                    if (fractionality > 0.0001 && fractionality > largestFraction)
                     {
-                        largestFraction = frac;
+                        largestFraction = fractionality;
                         sourceRow = i;
                     }
                 }
@@ -256,3 +292,19 @@ namespace LPR_Solver.BusinessLogic
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
