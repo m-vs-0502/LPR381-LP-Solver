@@ -38,6 +38,12 @@
             this.lblAlgorithm = new System.Windows.Forms.Label();
             this.btnNextTable = new System.Windows.Forms.Button();
             this.btnPreviousTable = new System.Windows.Forms.Button();
+            this.lblSensitivity = new System.Windows.Forms.Label();
+            this.cmbSensitivity = new System.Windows.Forms.ComboBox();
+            this.lblSAHelp = new System.Windows.Forms.Label();
+            this.txtSAIndex = new System.Windows.Forms.TextBox();
+            this.txtSADelta = new System.Windows.Forms.TextBox();
+            this.btnSensitivity = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClose
@@ -149,6 +155,72 @@
             this.btnPreviousTable.Visible = false;
             this.btnPreviousTable.Click += new System.EventHandler(this.btnPreviousTable_Click);
             // 
+            // lblSensitivity
+            // 
+            this.lblSensitivity.AutoSize = true;
+            this.lblSensitivity.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblSensitivity.Location = new System.Drawing.Point(12, 88);
+            this.lblSensitivity.Name = "lblSensitivity";
+            this.lblSensitivity.Size = new System.Drawing.Size(120, 17);
+            this.lblSensitivity.TabIndex = 10;
+            this.lblSensitivity.Text = "Sensitivity Analysis:";
+            // 
+            // cmbSensitivity
+            // 
+            this.cmbSensitivity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSensitivity.FormattingEnabled = true;
+            this.cmbSensitivity.Items.AddRange(new object[] {
+            "Range: Non-Basic Variable",
+            "Change: Non-Basic Variable",
+            "Range: Basic Variable",
+            "Change: Basic Variable",
+            "Range: Constraint RHS",
+            "Change: Constraint RHS",
+            "Range: Non-Basic Column Coeff",
+            "Change: Non-Basic Column Coeff",
+            "Add New Activity",
+            "Add New Constraint",
+            "Shadow Prices",
+            "Duality"});
+            this.cmbSensitivity.Location = new System.Drawing.Point(12, 108);
+            this.cmbSensitivity.Name = "cmbSensitivity";
+            this.cmbSensitivity.Size = new System.Drawing.Size(170, 25);
+            this.cmbSensitivity.TabIndex = 11;
+            this.cmbSensitivity.SelectedIndexChanged += new System.EventHandler(this.cmbSensitivity_SelectedIndexChanged);
+            // 
+            // lblSAHelp
+            // 
+            this.lblSAHelp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblSAHelp.Location = new System.Drawing.Point(12, 140);
+            this.lblSAHelp.Name = "lblSAHelp";
+            this.lblSAHelp.Size = new System.Drawing.Size(170, 70);
+            this.lblSAHelp.TabIndex = 12;
+            this.lblSAHelp.Text = "Select an operation.";
+            // 
+            // txtSAIndex
+            // 
+            this.txtSAIndex.Location = new System.Drawing.Point(12, 215);
+            this.txtSAIndex.Name = "txtSAIndex";
+            this.txtSAIndex.Size = new System.Drawing.Size(170, 25);
+            this.txtSAIndex.TabIndex = 13;
+            // 
+            // txtSADelta
+            // 
+            this.txtSADelta.Location = new System.Drawing.Point(12, 246);
+            this.txtSADelta.Name = "txtSADelta";
+            this.txtSADelta.Size = new System.Drawing.Size(170, 25);
+            this.txtSADelta.TabIndex = 14;
+            // 
+            // btnSensitivity
+            // 
+            this.btnSensitivity.Location = new System.Drawing.Point(12, 279);
+            this.btnSensitivity.Name = "btnSensitivity";
+            this.btnSensitivity.Size = new System.Drawing.Size(170, 28);
+            this.btnSensitivity.TabIndex = 15;
+            this.btnSensitivity.Text = "Perform Analysis";
+            this.btnSensitivity.UseVisualStyleBackColor = true;
+            this.btnSensitivity.Click += new System.EventHandler(this.btnSensitivity_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -156,6 +228,12 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSensitivity);
+            this.Controls.Add(this.txtSADelta);
+            this.Controls.Add(this.txtSAIndex);
+            this.Controls.Add(this.lblSAHelp);
+            this.Controls.Add(this.cmbSensitivity);
+            this.Controls.Add(this.lblSensitivity);
             this.Controls.Add(this.btnPreviousTable);
             this.Controls.Add(this.btnNextTable);
             this.Controls.Add(this.lblAlgorithm);
@@ -191,6 +269,12 @@
         private System.Windows.Forms.Label lblAlgorithm;
         private System.Windows.Forms.Button btnNextTable;
         private System.Windows.Forms.Button btnPreviousTable;
+        private System.Windows.Forms.Label lblSensitivity;
+        private System.Windows.Forms.ComboBox cmbSensitivity;
+        private System.Windows.Forms.Label lblSAHelp;
+        private System.Windows.Forms.TextBox txtSAIndex;
+        private System.Windows.Forms.TextBox txtSADelta;
+        private System.Windows.Forms.Button btnSensitivity;
     }
 }
 

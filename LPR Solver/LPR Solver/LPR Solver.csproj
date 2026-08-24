@@ -54,6 +54,7 @@
     <Compile Include="BusinessLogic\Knapsack.cs" />
     <Compile Include="BusinessLogic\OutputBuilder.cs" />
     <Compile Include="BusinessLogic\RevisedSimplex.cs" />
+    <Compile Include="BusinessLogic\SensitivityAnalysis.cs" />
     <Compile Include="BusinessLogic\Simplex.cs" />
     <Compile Include="Data\FileRepo.cs" />
     <Compile Include="Presentation\Main.cs">

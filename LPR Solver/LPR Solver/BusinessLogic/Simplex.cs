@@ -28,7 +28,8 @@ namespace LPR_Solver.BusinessLogic
             List<string> colHeaders,
             List<string> rowHeaders,
             string objFunc = "max",//default value incase none is given
-            string outputPath = null)
+            string outputPath = null,
+            bool showDialogs = true)//when false, suppress popups/success dialog (used by internal sensitivity solves)
         {
             List<string> outputPages = new List<string>();//output list of tables
             List<string> rowHeads = rowHeaders.Select(r => r.Trim()).ToList();//selects rowheaders with extra redundancy incase whitespace is before or after, preventing output formatting problems
@@ -116,7 +117,7 @@ namespace LPR_Solver.BusinessLogic
                     {
                         // Infeasible since rhs neg with no neg coefficients in row
 
-                        MessageBox.Show("Infeasible Dual simplex problem");
+                        if (showDialogs) MessageBox.Show("Infeasible Dual simplex problem");
                         return (outputPages, null, rowHeads);
 
                     }
@@ -182,7 +183,7 @@ namespace LPR_Solver.BusinessLogic
                 if (pivotRow == -1)
                 {
                     // Unbounded
-                    MessageBox.Show("Primal Simplex problem is unbounded");
+                    if (showDialogs) MessageBox.Show("Primal Simplex problem is unbounded");
                     return (outputPages, null, rowHeads);
                 }
 
@@ -192,7 +193,7 @@ namespace LPR_Solver.BusinessLogic
             }
 
 
-            MessageBox.Show("Succesfully completed solution. Find output file at:\n" + outputPath);
+            if (showDialogs) MessageBox.Show("Succesfully completed solution. Find output file at:\n" + outputPath);
             return (outputPages, matrixList, rowHeads);
         }
 
