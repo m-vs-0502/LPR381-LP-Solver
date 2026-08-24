@@ -17,7 +17,7 @@ namespace LPR_Solver
     public partial class Main : Form
     {
 
-        private readonly FileService _fileService = new FileService(); //Create instance of object to use BusinessLogic functions
+        private readonly FileService _fileService = new FileService(); //Create instance of object for file 
 
         public Main()
         {
@@ -41,13 +41,13 @@ namespace LPR_Solver
                 // 2. Explicitly select the first filter option
                 openFD.FilterIndex = 1;
 
-                openFD.InitialDirectory = Path.Combine(AppContext.BaseDirectory,@"..\..\..\");
+                openFD.InitialDirectory = Path.Combine(AppContext.BaseDirectory, @"..\..\..\");
 
 
                 if (openFD.ShowDialog() == DialogResult.OK)
                 {
                     openFD.Filter = "Text Files (*.txt)|*.txt"; //Shows only .txt files
-                     textFilePath = openFD.FileName; //Saves the path of selected file in variable
+                    textFilePath = openFD.FileName; //Saves the path of selected file in variable
 
                     try
                     {
@@ -69,22 +69,29 @@ namespace LPR_Solver
         {
             rTBDisplay.Clear();
             rTBDisplay.Text = "Model will be shown here once selected";
+
+            btnSolve.Visible = true;
+            btnEdit.Visible = true;
+            btnNextTable.Visible = false;
+            btnPreviousTable.Visible = false;
+
         }
 
         bool editMode = false;//used for edit button
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (!editMode)
-            { 
+            {
                 btnEdit.Text = "Save";
-                
-            } else
+
+            }
+            else
             {
                 btnEdit.Text = "Edit";
             }
             rTBDisplay.Enabled = !rTBDisplay.Enabled;
             editMode = !editMode;
-            
+
 
         }
 
@@ -93,23 +100,66 @@ namespace LPR_Solver
             cmbAlgorithm.SelectedIndex = 0;
         }
 
+
+        
+        int tableNum = 0;
+        List<string> modelOutput = new List<string>();
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            if (InputValidation.Validate(rTBDisplay.Text))
+
+            List<string> modelInput = new List<string>();
+            modelOutput.Clear();
+            
+
+            modelInput.Add(rTBDisplay.Text);
+            if (InputValidation.ValidateForm(rTBDisplay.Text))//universal validation
             {
-                string output = null;
+
                 switch (cmbAlgorithm.SelectedIndex)
                 {
                     case 0:
-                        output = Simplex.SimplexSolver(rTBDisplay.Text,textFilePath);
+                        var (modelOutputList, tblOptimal) = Simplex.SimplexSolver(modelInput, textFilePath, true);
+                        modelOutput = modelOutputList;
+                        break;
+                    case 2:
+                        modelOutput = BranchAndBound.BaBSimplexSolver(modelInput, textFilePath);
+                        break;
+                    case 3:
+                        modelOutput = Knapsack.KnapsackSolver(modelInput, textFilePath);
                         break;
                     default:
+                        modelOutput.Add("No model selected.");
                         break;
 
                 }
 
-                rTBDisplay.Text = output;
+                rTBDisplay.Text = modelOutput[0];
+                btnNextTable.Visible = true;
+                btnPreviousTable.Visible = true;
+                btnEdit.Visible = false;
+                btnSolve.Visible = false;
+                rTBDisplay.Enabled = true;
+                
 
+
+            }
+        }
+
+        private void btnNextTable_Click(object sender, EventArgs e)
+        {
+            if (tableNum + 1 <= modelOutput.Count() - 1)
+            {
+                rTBDisplay.Text = modelOutput[tableNum + 1];
+                tableNum++;
+            }
+        }
+
+        private void btnPreviousTable_Click(object sender, EventArgs e)
+        {
+            if (tableNum - 1 >= 0)
+            {
+                rTBDisplay.Text = modelOutput[tableNum - 1];
+                tableNum--;
             }
         }
     }

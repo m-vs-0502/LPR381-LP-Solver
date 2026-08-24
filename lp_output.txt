@@ -1,9 +1,26 @@
-     -2	     -3	     -3	     -5	     -2	     -4	      0	      0	
-     11	      8	      6	     14	     10	     10	      1	     40	
+    Knapsack Results:    
+Capacity (W): 40
+Number of Items: 6
 
-   1,93	  -0,14	  -0,86	      0	   1,57	  -0,43	   0,36	  14,29	
-   0,79	   0,57	   0,43	      1	   0,71	   0,71	   0,07	   2,86	
+Item Parameters:
+  x1: Value = 2, Weight = 11
+  x2: Value = 3, Weight = 8
+  x3: Value = 3, Weight = 6
+  x4: Value = 5, Weight = 14
+  x5: Value = 2, Weight = 10
+  x6: Value = 4, Weight = 10
 
-    3,5	      1	      0	      2	      3	      1	    0,5	     20	
-   1,83	   1,33	      1	   2,33	   1,67	   1,67	   0,17	   6,67	
+----------------------------------------
+OPTIMAL SOLUTION:
+Optimal Z Value: 15
+
+Decision Variable Assignments:
+  x1 = 0
+  x2 = 1
+  x3 = 1
+  x4 = 1
+  x5 = 0
+  x6 = 1
+
+Total Weight Used: 38 / 40
 

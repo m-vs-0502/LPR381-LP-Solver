@@ -36,6 +36,8 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.cmbAlgorithm = new System.Windows.Forms.ComboBox();
             this.lblAlgorithm = new System.Windows.Forms.Label();
+            this.btnNextTable = new System.Windows.Forms.Button();
+            this.btnPreviousTable = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClose
@@ -125,6 +127,28 @@
             this.lblAlgorithm.TabIndex = 7;
             this.lblAlgorithm.Text = "Algorithm to use:";
             // 
+            // btnNextTable
+            // 
+            this.btnNextTable.Location = new System.Drawing.Point(782, 343);
+            this.btnNextTable.Name = "btnNextTable";
+            this.btnNextTable.Size = new System.Drawing.Size(75, 23);
+            this.btnNextTable.TabIndex = 8;
+            this.btnNextTable.Text = "Next table iteration";
+            this.btnNextTable.UseVisualStyleBackColor = true;
+            this.btnNextTable.Visible = false;
+            this.btnNextTable.Click += new System.EventHandler(this.btnNextTable_Click);
+            // 
+            // btnPreviousTable
+            // 
+            this.btnPreviousTable.Location = new System.Drawing.Point(782, 372);
+            this.btnPreviousTable.Name = "btnPreviousTable";
+            this.btnPreviousTable.Size = new System.Drawing.Size(75, 23);
+            this.btnPreviousTable.TabIndex = 9;
+            this.btnPreviousTable.Text = "Previous";
+            this.btnPreviousTable.UseVisualStyleBackColor = true;
+            this.btnPreviousTable.Visible = false;
+            this.btnPreviousTable.Click += new System.EventHandler(this.btnPreviousTable_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -132,6 +156,8 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.btnPreviousTable);
+            this.Controls.Add(this.btnNextTable);
             this.Controls.Add(this.lblAlgorithm);
             this.Controls.Add(this.cmbAlgorithm);
             this.Controls.Add(this.btnClear);
@@ -163,6 +189,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cmbAlgorithm;
         private System.Windows.Forms.Label lblAlgorithm;
+        private System.Windows.Forms.Button btnNextTable;
+        private System.Windows.Forms.Button btnPreviousTable;
     }
 }
 
