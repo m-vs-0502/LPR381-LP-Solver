@@ -1,0 +1,6 @@
+﻿# Visual Studio cache / build output
+.vs/
+[Oo]bj/
+[Bb]in/
+*.vsidx
+*.cache
